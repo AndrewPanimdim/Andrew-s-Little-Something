@@ -1,0 +1,216 @@
+#start {
+    position: absolute;
+    top:46%;
+    left:46%;
+    width: 10%;
+    height: 8%;
+    background-color: rgb(147, 220, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vw;
+    font-size: clamp(1rem, calc(2.5vw+ 1rem), 3rem);
+    cursor: pointer;
+    transition: 0.6s;
+    animation: jumping 0.5s ease-in-out infinite alternate;
+}
+
+#start:hover {
+    background-color: rgb(153, 220, 243);
+    box-shadow: 0 0 150px rgb(153, 221, 243);
+}
+
+#hello {
+    position: absolute;
+    top: 46%;
+    left: 5%;
+    animation: slideleft 1.9s ease-in-out;
+    font-size: clamp(0.4rem, calc(5vw + 1rem), 11rem);
+}
+
+#and {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    animation-delay: 2s;
+    animation:slideleft 2s ease-in-out;
+}
+
+#littlesomething {
+    font-size: clamp(0.4rem, 4vw, 5rem);
+    position: absolute;
+    top: 10%;
+    right: 4%;
+
+}
+
+#container{
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    width: 55%;
+    height: 60%;
+    background-color: rgba(255, 192, 203, 0);
+}
+
+#dark-mode {
+    width: 12%;
+    height: 17%;
+    position: absolute;
+    top: 0;
+    left: 42%;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    border-radius: 16%;
+    transition: 0.5s;
+    animation: slideright 2s ease-in-out;
+}
+
+#dark-mode:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+#dark-mode.dark:hover {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 30px black;
+}
+
+#change-background {
+    background-color: rgb(251, 199, 251); 
+    width: 13%;
+    height: 20%; 
+    position: absolute;
+    top: 5%;
+    right: 0%; 
+    animation: slidedown 3s ease-in-out;
+    border-radius: 1vw;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#change-background:hover {
+    background-color: rgb(253, 218, 253); 
+    box-shadow: 0 0 30px rgb(253, 218, 253);
+}
+
+#dot{ 
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation: pop 0.5s ease-in-out;
+    z-index: -10;
+}
+
+#MovementMiniGame {
+    background-color: rgb(240, 107, 41);
+    width: 10%;
+    height: 16%;
+    position: absolute;
+    top: 35%;
+    border-radius: 15%;
+    right: 30%;
+    animation: slidedown 4s ease-in-out ;
+    transition: 0.5s;
+}
+
+#MovementMiniGame:hover{
+    background-color: rgb(244, 129, 47);
+    box-shadow: 0 0 30px rgb(238, 133, 72);
+}
+
+#moveEffect{
+    background-color: rgb(81, 198, 252);
+    width: 10%;
+    height: 12%; 
+    position: absolute;
+    top: 5%;
+    right: 20%; 
+    animation: slideright 3s ease-in-out;
+    border-radius: 1vw;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+#moveEffect:hover{
+    background-color: rgb(126, 207, 245); 
+    box-shadow: 0 0 40px rgb(126, 207, 245);
+}
+
+#MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover {
+    scale: 1.1;
+}
+
+#video_showcase{
+    width: 30%;
+    height: 30%;
+    background-color: grey;
+    position:absolute;
+    top: 10%;
+    left: 5%;
+    border-radius: 2rem;
+
+}
+
+
+@media (max-width: 768px){
+    #container{
+        position: absolute;
+        left: 10%;
+        width: 80%;
+    }
+}
+
+
+
+
+
+@keyframes slideleft {
+    from{transform: translateX(-500%);}
+    to{transform: translateX(0);}
+}
+
+@keyframes jumping {
+    from{transform:translateY(-5%)}
+    to{transform:translateY(5%);}
+}
+
+@keyframes slideright {
+    from{transform: translateX(1000%);}
+    to{transform: translateX(0);}
+}
+
+@keyframes popup {
+    from{transform: scale(0); opacity: 0;}
+    to{transform: scale(1); opacity: 1;}
+}
+
+@keyframes slidedown {
+    from{transform: translateY(-500%);}
+    to{transform: translateY(0);}
+}
+
+@keyframes start{
+    from{transform: scale(1); opacity: 1;}
+    50%{transform: scale(4); opacity: 1;}
+    to{transform: scale(0); opacity: 0;}
+}
+
+@keyframes slideup {
+    from{transform: translateY(500%);}
+    to{transform: translateY(0);}
+}
+
+@keyframes pop{
+    from{transform: scale(0); opacity: 0;}
+    to{transform: scale(1); opacity: 1;}
+}
+
+
+
+
+
