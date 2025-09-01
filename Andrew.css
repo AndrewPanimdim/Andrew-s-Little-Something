@@ -100,7 +100,7 @@
     height: 20px;
     border-radius: 50%;
     position: absolute;
-    top: 100px;
+    top: 400px;
     left: 100px;
     animation: pop 0.5s ease-in-out;
     z-index: -10;
@@ -108,8 +108,8 @@
 
 #MovementMiniGame {
     background-color: rgb(240, 107, 41);
-    width: 10%;
-    height: 16%;
+    width: 8%;
+    height: 11%;
     position: absolute;
     top: 35%;
     border-radius: 15%;
@@ -141,19 +141,33 @@
     box-shadow: 0 0 40px rgb(126, 207, 245);
 }
 
-#MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover {
+#MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover,#divv:hover{
     scale: 1.1;
 }
 
-#video_showcase{
-    width: 30%;
-    height: 30%;
-    background-color: grey;
-    position:absolute;
-    top: 10%;
-    left: 5%;
-    border-radius: 2rem;
+#divv {
+    background-color: rgb(243, 226, 70);
+    width: 7vw;
+    height: 8vh;
+    border-radius: 15px;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    animation: slidedown 1s ease-in-out forwards;
+    transition: 0.5s;
+}
 
+#divv:hover{
+    background-color: rgb(242, 237, 95);
+    box-shadow: 0 0 30px rgb(247, 251, 124);
+}
+
+#hello.move, #dark-mode.move, #change-background.move, #MovementMiniGame.move, #divv.move {
+    animation: move 1s ease-in-out forwards;
+}
+
+#hello.back, #dark-mode.back, #change-background.back, #MovementMiniGame.back, #divv.back {
+    animation: back 1s ease-in-out forwards;
 }
 
 
@@ -168,7 +182,32 @@
         width: 30%;
         left: 40%;
         font-size: 2rem ;
-        
+    }
+
+    #hello{
+        font-size: 2.5rem;
+    }
+
+    #MovementMiniGame{
+        width: 15vw;
+    }
+
+    #change-background{
+        width: 15vw;
+        height: 20%;
+    }
+
+    #moveEffect{
+        right: 25%;
+        width: 15vw;
+        height: 12%;
+        top: 3%;
+    }
+
+    #dark-mode{
+        width: 15vw;
+        height: 17%;
+        left: 25%;
     }
 }
 
@@ -215,6 +254,18 @@
 @keyframes pop{
     from{transform: scale(0); opacity: 0;}
     to{transform: scale(1); opacity: 1;}
+}
+
+@keyframes move {
+    from{transform: translateX(0%); scale: 1;}
+    50%{transform: translateX(-20%); scale: 1.4;}
+    to{transform: translateX(0%); scale: 1;}
+}
+
+@keyframes back {
+    from{transform: translateX(0%); scale: 1;}
+    50%{transform: translateX(20%); scale: 1.4;}
+    to{transform: translateX(0%); scale: 1;}
 }
 
 

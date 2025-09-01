@@ -1,3 +1,6 @@
+
+//LINK: https://andrewpanimdim.github.io/Andrew-s-Little-Something/Andrew.html
+
 const startbutton =  document.getElementById('start');
 const hello = document.getElementById('hello');
 let windowstatus = false;
@@ -23,12 +26,14 @@ darkmode.addEventListener('click', () =>{
         background.style.display = 'none';
         darkmode.style.backgroundColor = 'rgba(26, 26, 26, 1)';
         darkmode.classList.add('dark');
+        player.style.backgroundColor = 'red';
     }else{
         document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
         hello.style.color = 'white';
         background.style.display = 'none';
         darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
         darkmode.classList.remove('dark');
+        player.style.backgroundColor = 'orange';
     }
 });
 
@@ -54,8 +59,8 @@ start.addEventListener('click', () => {
     start.style.animation = 'start 0.5s forwards';
 });
 
-const player = document.getElementById('dot');
-    let x = 100, y = 100;
+    const player = document.getElementById('dot');
+    let x = 100, y = 400;
     const step = 10;
 document.addEventListener('keydown', (event)=>{
     if(event.key === 'ArrowUp' || event.key === 'w' || event.key === 'W'){
@@ -81,6 +86,17 @@ let gamestatus = false;
 let n = 1;
 red.addEventListener('click',() =>{
     gamestatus = !gamestatus;
+    background.style.display = 'none';
+if(darkmodestatus === false){
+    hello.style.color = 'white';
+    darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
+    darkmode.classList.remove('dark');    
+}else{
+    hello.style.color = 'black';
+    darkmode.style.backgroundColor = 'rgba(26, 26, 26, 1)';
+    darkmode.classList.add('dark');
+}
+
 if(n===1){
     alert('click W A S D to move');
     n--;
@@ -94,3 +110,26 @@ if(gamestatus){
 
 
 const moveEffect = document.getElementById('moveEffect');
+let moveEffectStatus = false;
+const divv = document.getElementById('divv');
+
+moveEffect.addEventListener('click', async () => {
+    const elements = [darkmode, cbg, divv, red];
+    const animationClass = moveEffectStatus ? 'move' : 'back';
+
+    for (const el of elements) {
+        // Remove old animation classes
+        el.classList.remove('move', 'back');
+        void el.offsetWidth; // Force reflow to restart animation
+
+        // Add the new animation class
+        el.classList.add(animationClass);
+
+        // Wait 1 second before animating the next element
+        await new Promise(resolve => setTimeout(resolve, 300));
+    }
+
+    moveEffectStatus = !moveEffectStatus;
+});
+
+
