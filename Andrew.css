@@ -54,16 +54,15 @@
 }
 
 #dark-mode {
-    width: 12%;
-    height: 17%;
+    background-color: rgb(237, 237, 236);
+    width: 7vw;
+    height: 8vh;
+    border-radius: 15px;
     position: absolute;
-    top: 0;
-    left: 42%;
-    background-color: rgb(255, 255, 255);
-    z-index: 3;
-    border-radius: 16%;
+    top: 40%;
+    right: 5%;
+    animation: slidedown 1s ease-in-out forwards;
     transition: 0.5s;
-    animation: slideright 2s ease-in-out;
 }
 
 #dark-mode:hover {
@@ -146,20 +145,21 @@
 }
 
 #divv {
+    width: 12%;
+    height: 17%;
+    position: absolute;
+    top: 0;
+    left: 42%;
     background-color: rgb(243, 226, 70);
     width: 7vw;
-    height: 8vh;
-    border-radius: 15px;
-    position: absolute;
-    top: 40%;
-    right: 5%;
-    animation: slidedown 1s ease-in-out forwards;
+    border-radius: 16%;
     transition: 0.5s;
+    animation: slideright 2s ease-in-out;
 }
 
 #divv:hover{
-    background-color: rgb(242, 237, 95);
-    box-shadow: 0 0 30px rgb(247, 251, 124);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
 }
 
 #hello.move, #dark-mode.move, #change-background.move, #MovementMiniGame.move, #divv.move {

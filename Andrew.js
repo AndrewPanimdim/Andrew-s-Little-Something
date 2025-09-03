@@ -109,12 +109,14 @@ if(gamestatus){
 });
 
 
+
+
 const moveEffect = document.getElementById('moveEffect');
 let moveEffectStatus = false;
 const divv = document.getElementById('divv');
 
 moveEffect.addEventListener('click', async () => {
-    const elements = [darkmode, cbg, divv, red];
+    const elements = [darkmode, cbg, divv, red, moveEffect];
     const animationClass = moveEffectStatus ? 'move' : 'back';
 
     for (const el of elements) {
