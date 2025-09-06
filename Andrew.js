@@ -1,6 +1,7 @@
 
 //LINK: https://andrewpanimdim.github.io/Andrew-s-Little-Something/Andrew.html
 
+
 const startbutton =  document.getElementById('start');
 const hello = document.getElementById('hello');
 let windowstatus = false;
@@ -26,7 +27,7 @@ darkmode.addEventListener('click', () =>{
         background.style.display = 'none';
         darkmode.style.backgroundColor = 'rgba(26, 26, 26, 1)';
         darkmode.classList.add('dark');
-        player.style.backgroundColor = 'red';
+        player.style.backgroundColor = 'blue';
     }else{
         document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
         hello.style.color = 'white';
@@ -53,11 +54,12 @@ cbg.addEventListener('click', () => {
     background.style.display = 'block';
 });
 
-
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
     start.style.animation = 'start 0.5s forwards';
 });
+
+   
 
     const player = document.getElementById('dot');
     let x = 100, y = 400;
@@ -79,8 +81,29 @@ document.addEventListener('keydown', (event)=>{
     player.style.left = x + 'px';
     player.style.top = y + 'px';
 
+    checkCollision();
 });
 
+function checkCollision() {
+    const tolerance = 5;
+    if (Math.abs(x - tx) < tolerance && Math.abs(y - ty) < tolerance) {
+        tx = Math.floor(Math.random() * 500);
+        ty = Math.floor(Math.random() * 500);
+        target.style.left = tx + 'px';
+        target.style.top = ty + 'px';
+        alert('yehey 🎉');
+        target.style.display = 'none'
+        player.style.display = 'none'
+
+    }
+}
+
+ let tx = Math.floor(Math.random()*500);
+let ty =Math.floor(Math.random()*500); 
+
+const target = document.getElementById('target');
+target.style.left = tx + 'px';
+target.style.top = ty + 'px'; 
 const red = document.getElementById('MovementMiniGame');
 let gamestatus = false;
 let n = 1;
@@ -98,13 +121,15 @@ if(darkmodestatus === false){
 }
 
 if(n===1){
-    alert('click W A S D to move');
+    alert('GO INSIDE THE RED BOX!');
     n--;
 }
 if(gamestatus){
     player.style.display = 'block';
+    target.style.display = 'block';
 } else {
     player.style.display = 'none';
+    target.style.display = 'none';
 }
 });
 
@@ -133,5 +158,7 @@ moveEffect.addEventListener('click', async () => {
 
     moveEffectStatus = !moveEffectStatus;
 });
+
+
 
 

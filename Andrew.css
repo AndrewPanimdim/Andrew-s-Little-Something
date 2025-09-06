@@ -158,8 +158,19 @@
 }
 
 #divv:hover{
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 30px rgb(255, 255, 255);
+    background-color: rgb(250, 220, 89);
+    box-shadow: 0 0 30px rgb(232, 218, 115);
+}
+
+#target{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    position:absolute;
+    top: auto;
+    left:auto;
+    display: none;
 }
 
 #hello.move, #dark-mode.move, #change-background.move, #MovementMiniGame.move, #divv.move {
