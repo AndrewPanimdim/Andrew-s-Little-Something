@@ -185,14 +185,14 @@
 @media (max-width: 768px){
     #container{
         position: absolute;
-        left: 10%;
-        width: 80%;
+        left: 5%;
+        width: 90%;
     }
 
     #start{
         width: 30%;
         left: 40%;
-        font-size: 2rem ;
+        font-size: 1.5rem ;
     }
 
     #hello{
@@ -218,12 +218,19 @@
     #dark-mode{
         width: 15vw;
         height: 17%;
-        left: 25%;
+        right: 15%;
     }
 
     #MovementMiniGame{
         display: none;
     }
+
+    #divv{
+        width: 15%;
+        height: 10%;
+        left: 35%;
+    }
+    
 }
 
 
