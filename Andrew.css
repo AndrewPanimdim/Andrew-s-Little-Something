@@ -220,6 +220,10 @@
         height: 17%;
         left: 25%;
     }
+
+    #MovementMiniGame{
+        display: none;
+    }
 }
 
 
