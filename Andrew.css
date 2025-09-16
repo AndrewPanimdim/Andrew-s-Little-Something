@@ -25,7 +25,7 @@
     top: 46%;
     left: 5%;
     animation: slideleft 1.9s ease-in-out;
-    font-size: clamp(0.4rem, calc(5vw + 1rem), 11rem);
+    font-size: clamp(0.4rem, calc(6vw + 1rem), 11rem);
 }
 
 #and {
@@ -173,14 +173,43 @@
     display: none;
 }
 
-#hello.move, #dark-mode.move, #change-background.move, #MovementMiniGame.move, #divv.move {
+#SeeMore {
+    background-color: lightgreen;
+    width: 12%;
+    height: 17%;
+    position: absolute;
+    top: 70%;
+    right: 4%;
+    border-radius: 16%;
+    transition: 0.5s;
+    animation: slideright 2.3s ease-in-out;
+}
+
+#SeeMore:hover{
+    background-color: rgb(144, 238, 144);
+    box-shadow: 0 0 30px rgb(144, 238, 144);
+    scale: 1.1;
+}
+
+#hello.move, #dark-mode.move, #change-background.move, #MovementMiniGame.move, #divv.move, #SeeMore.move {
     animation: move 1s ease-in-out forwards;
 }
 
-#hello.back, #dark-mode.back, #change-background.back, #MovementMiniGame.back, #divv.back {
+#hello.back, #dark-mode.back, #change-background.back, #MovementMiniGame.back, #divv.back, #SeeMore.back {
     animation: back 1s ease-in-out forwards;
 }
 
+#page1 {
+    background-color: rgb(7, 15, 43);
+    display: none;
+    opacity: 0;
+    animation: slideup 2s ease-in-out forwards;
+}
+
+#page1.show {
+    display: block;
+    opacity: 1;
+}
 
 @media (max-width: 768px){
     #container{

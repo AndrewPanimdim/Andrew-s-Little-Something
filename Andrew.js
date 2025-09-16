@@ -160,5 +160,11 @@ moveEffect.addEventListener('click', async () => {
 });
 
 
+const seemore = document.getElementById('SeeMore');
+const page1 = document.getElementById('page1');
+seemore.addEventListener('click', () => {
+    page1.classList.add('show');
+});
+
 
 
