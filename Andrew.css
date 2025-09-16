@@ -211,6 +211,12 @@
     opacity: 1;
 }
 
+#ilike{
+    position: absolute; 
+    top: 18%; left: 9%;
+    font-size: clamp(0.4rem, 0.9rem, 2rem);
+}
+
 @media (max-width: 768px){
     #container{
         position: absolute;
@@ -259,6 +265,11 @@
         height: 10%;
         left: 35%;
     }
+
+    #ilike {
+        top: 5%;
+    }
+
     
 }
 
