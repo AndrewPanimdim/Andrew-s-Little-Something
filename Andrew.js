@@ -167,4 +167,8 @@ seemore.addEventListener('click', () => {
 });
 
 
+const photo rotation = ["" ]
+
+
+
 
