@@ -166,7 +166,13 @@ seemore.addEventListener('click', () => {
     page1.classList.add('show');
 });
 
-const photocontainer = ["https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/Andrew.Panimdim.jpg?raw=true", "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/podium.jpg?raw=true","https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/guitar.jpg?raw=true","https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/humswek.jpg?raw=true"]
+const photocontainer = [
+    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/Andrew.Panimdim.jpg?raw=true", 
+    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/humswek.jpg?raw=true",
+    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/mama.jpg?raw=true",
+    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/podium.jpg?raw=true",
+    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/apcraa.jpg?raw=true"
+];
 const photoshowcase = document.getElementById('PhotoShowcasecontainer');
 const photoshowcaseimg = document.getElementById('photoshowcase');
 let photocontainerindex = 0;
@@ -182,6 +188,29 @@ setInterval(() => {
     photoshowcaseimg.style.width = 'auto';
     photoshowcaseimg.style.height = '50vh';
 }, 5000);
+
+photoshowcaseimg.addEventListener('click', () => {
+    photocontainerindex++;
+    if(photocontainerindex >= photocontainer.length){
+        photocontainerindex = 0;
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
