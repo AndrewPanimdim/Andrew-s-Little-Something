@@ -222,7 +222,7 @@
     top: 30%;
     left: 5%;
     background-color: red;
-    
+    object-fit: cover;  
 }
 
 #PhotoShowcasecontainer{
@@ -233,6 +233,7 @@
     border-radius: 2vw;
     overflow: hidden;
     transition: 1s;
+
 }
 
 #PhotoShowcasecontainer:hover{
