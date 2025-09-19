@@ -29,14 +29,24 @@ darkmode.addEventListener('click', () =>{
         background.style.display = 'none';
         darkmode.style.backgroundColor = 'rgba(26, 26, 26, 1)';
         darkmode.classList.add('dark');
+        darkmode.textContent = 'dark Mode';
+        darkmode.classList.remove('light');
+        darkmode.classList.add('darkk');
+
     }else{
         document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
         hello.style.color = 'white';
         background.style.display = 'none';
         darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
         darkmode.classList.remove('dark');
+        darkmode.textContent = 'light Mode';
+        darkmode.classList.add('light');
+        darkmode.classList.remove('darkk');
     }
 });
+
+
+
 
 const backgrounds = ['https://i.pinimg.com/originals/82/88/e9/8288e9eec7c66c0790ee546462b8e204.gif', 'http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-50.gif','https://i.pinimg.com/originals/42/b4/22/42b4229a9ec3145edaa895b2415dd720.gif']
 let backgroundindex = 1;
@@ -71,6 +81,14 @@ const page1 = document.getElementById('page1');
 seemore.addEventListener('click', () => {
     page1.classList.add('show');
 });
+
+
+const back = document.getElementById('back');
+back.addEventListener('click', () => {
+    page1.classList.remove('show');
+});
+
+
 
 const photocontainer = [
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/Andrew.Panimdim.jpg?raw=true", 
@@ -123,6 +141,7 @@ moveeffect.addEventListener('click', () => {
         hello.style.color = 'white';
         document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
         background.style.display = 'none';
+        darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
     } else {
         minichar.style.display = 'none';
     }
@@ -149,6 +168,8 @@ document.addEventListener('keyup', (event) => {
         minichar.src = 'gif/standing.gif';
     }
 });
+
+
 
 
 
