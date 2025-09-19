@@ -104,22 +104,22 @@ photoshowcaseimg.addEventListener('click', () => {
 
 
 
+
 const minichar = document.getElementById('minicharacter');
 const moveeffect = document.getElementById('moveEffect');
 
 let charx = 60;
+
 const stepmini = 3;
 let ministatus = false;
-let stationary = true;
 
-// ✅ Base path for GIFs (works locally + GitHub Pages)
-const gifBasePath = "./gif/";  
+stationary = true;
 
 moveeffect.addEventListener('click', () => {
     ministatus = !ministatus;
     if (ministatus) {
         minichar.style.display = 'block';
-        alert('Use D and A or arrow keys to move right and left');
+        alert('use D and A or arrow keys to move right and left');
         hello.style.color = 'white';
         document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
         background.style.display = 'none';
@@ -129,27 +129,26 @@ moveeffect.addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
+    if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
         minichar.style.left = charx + '%';
         stationary = false;
-        minichar.src = gifBasePath + "runningright.gif";
+        minichar.src = 'gif/runningright.gif';
     }
-    else if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
+    else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
         charx -= stepmini;
         minichar.style.left = charx + '%';
         stationary = false;
-        minichar.src = gifBasePath + "runningleft.gif";
+        minichar.src = 'gif/runningleft.gif';
     }
 });
 
 document.addEventListener('keyup', (event) => {
-    if (['ArrowRight', 'ArrowLeft', 'a', 'A', 'd', 'D'].includes(event.key)) {
+    if(['ArrowRight','ArrowLeft','a','A','d','D'].includes(event.key)){
         stationary = true;
-        minichar.src = gifBasePath + "standing.gif";
+        minichar.src = 'gif/standing.gif';
     }
 });
-
 
 
 
