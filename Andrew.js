@@ -107,6 +107,11 @@ photoshowcaseimg.addEventListener('click', () => {
 const minichar = document.getElementById('minicharacter');
 const moveeffect = document.getElementById('moveEffect');
 
+const standing = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/gif/standing.gif?raw=true']
+
+const runningleft = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/gif/runningleft.gif?raw=true']
+
+const runningright = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/gif/runningright.gif?raw=true']
 let charx = 60;
 
 const stepmini = 3;
@@ -133,20 +138,20 @@ document.addEventListener('keydown', (event) => {
         charx += stepmini;
         minichar.style.left = charx + '%';
         stationary = false;
-        minichar.src = 'gif/runningright.gif';
+        minichar.src = runningright[0];
     }
     else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
         charx -= stepmini;
         minichar.style.left = charx + '%';
         stationary = false;
-        minichar.src = 'gif/runningleft.gif';
+        minichar.src = runningleft[0];
     }
 });
 
 document.addEventListener('keyup', (event) => {
     if(['ArrowRight','ArrowLeft','a','A','d','D'].includes(event.key)){
         stationary = true;
-        minichar.src = 'gif/standing.gif';
+        minichar.src = standing[0];
     }
 });
 
@@ -154,9 +159,9 @@ document.addEventListener('keyup', (event) => {
 
 setInterval(() => {
     if(!stationary){
-        minichar.src = 'gif/runningright.gif';
+        minichar.src = runningright[0];
     }else{
-        minichar.src = 'gif/standing.gif';
+        minichar.src = standing[0];
     }
 }, 700);
 
