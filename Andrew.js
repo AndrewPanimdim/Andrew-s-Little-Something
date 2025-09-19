@@ -83,13 +83,6 @@ seemore.addEventListener('click', () => {
 });
 
 
-const back = document.getElementById('back');
-back.addEventListener('click', () => {
-    page1.classList.remove('show');
-});
-
-
-
 const photocontainer = [
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/Andrew.Panimdim.jpg?raw=true", 
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/humswek.jpg?raw=true",

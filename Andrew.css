@@ -257,7 +257,7 @@
 
 #moveEffect, #change-background, #dark-mode, #MovementMiniGame, #divv, #SeeMore{
     font-family: bungee;
-    font-size: clamp(0.1rem, 0.8rem, 1rem);
+    font-size: 80%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -353,6 +353,10 @@
     #moveEffect{
         display: none;
     }
+
+    #moveEffect, #change-background, #dark-mode, #MovementMiniGame, #divv, #SeeMore{
+    font-size: 50%;
+}
 
     
 }
