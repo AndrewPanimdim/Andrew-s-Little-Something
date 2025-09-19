@@ -47,6 +47,7 @@ cbg.addEventListener('click', () => {
     hello.style.color = 'white';
     darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
     minichar.style.display = 'none';
+
     if (backgroundindex >= backgrounds.length) {
         backgroundindex = 0;   
     }
@@ -107,11 +108,6 @@ photoshowcaseimg.addEventListener('click', () => {
 const minichar = document.getElementById('minicharacter');
 const moveeffect = document.getElementById('moveEffect');
 
-const standing = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/gif/standing.gif?raw=true']
-
-const runningleft = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/gif/runningleft.gif?raw=true']
-
-const runningright = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/gif/runningright.gif?raw=true']
 let charx = 60;
 
 const stepmini = 3;
@@ -124,10 +120,9 @@ moveeffect.addEventListener('click', () => {
     if (ministatus) {
         minichar.style.display = 'block';
         alert('use D and A or arrow keys to move right and left');
-        background.style.display = 'none';
-        document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
         hello.style.color = 'white';
-        darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
+        document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
+        background.style.display = 'none';
     } else {
         minichar.style.display = 'none';
     }
@@ -138,32 +133,24 @@ document.addEventListener('keydown', (event) => {
         charx += stepmini;
         minichar.style.left = charx + '%';
         stationary = false;
-        minichar.src = runningright[0];
+        minichar.src = 'gif/runningright.gif';
     }
     else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
         charx -= stepmini;
         minichar.style.left = charx + '%';
         stationary = false;
-        minichar.src = runningleft[0];
+        minichar.src = 'gif/runningleft.gif';
     }
 });
 
 document.addEventListener('keyup', (event) => {
     if(['ArrowRight','ArrowLeft','a','A','d','D'].includes(event.key)){
         stationary = true;
-        minichar.src = standing[0];
+        minichar.src = 'gif/standing.gif';
     }
 });
 
 
-
-setInterval(() => {
-    if(!stationary){
-        minichar.src = runningright[0];
-    }else{
-        minichar.src = standing[0];
-    }
-}, 700);
 
 
 
