@@ -17,6 +17,8 @@ startbutton.addEventListener('click', () => {
     }
 });
 
+
+
 const darkmode = document.getElementById('dark-mode');
 let darkmodestatus = false;
 darkmode.addEventListener('click', () =>{
@@ -136,30 +138,6 @@ if(gamestatus){
 
 
 
-const moveEffect = document.getElementById('moveEffect');
-let moveEffectStatus = false;
-const divv = document.getElementById('divv');
-
-moveEffect.addEventListener('click', async () => {
-    const elements = [darkmode, cbg, divv, red, moveEffect];
-    const animationClass = moveEffectStatus ? 'move' : 'back';
-
-    for (const el of elements) {
-        // Remove old animation classes
-        el.classList.remove('move', 'back');
-        void el.offsetWidth; // Force reflow to restart animation
-
-        // Add the new animation class
-        el.classList.add(animationClass);
-
-        // Wait 1 second before animating the next element
-        await new Promise(resolve => setTimeout(resolve, 300));
-    }
-
-    moveEffectStatus = !moveEffectStatus;
-});
-
-
 const seemore = document.getElementById('SeeMore');
 const page1 = document.getElementById('page1');
 seemore.addEventListener('click', () => {
@@ -196,6 +174,60 @@ photoshowcaseimg.addEventListener('click', () => {
     }
 });
 
+
+
+
+const minichar = document.getElementById('minicharacter');
+const moveeffect = document.getElementById('moveEffect');
+
+let charx = 60;
+
+const stepmini = 3;
+let ministatus = false;
+
+stationary = true;
+
+moveeffect.addEventListener('click', () => {
+    ministatus = !ministatus;
+    if (ministatus) {
+        minichar.style.display = 'block';
+        alert('use D and A or arrow keys to move right and left');
+    } else {
+        minichar.style.display = 'none';
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
+        charx += stepmini;
+        minichar.style.left = charx + '%';
+        stationary = false;
+        minichar.src = 'gif/runningright.gif';
+    }
+    else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
+        charx -= stepmini;
+        minichar.style.left = charx + '%';
+        stationary = false;
+        minichar.src = 'gif/runningleft.gif';
+    }
+});
+
+document.addEventListener('keyup', (event) => {
+    if(['ArrowRight','ArrowLeft','a','A','d','D'].includes(event.key)){
+        stationary = true;
+        minichar.src = 'gif/standing.gif';
+    }
+});
+
+
+
+setInterval(() => {
+    if(!stationary){
+        minichar.src = 'gif/runningright.gif';
+    }else{
+        minichar.src = 'gif/standing.gif';
+    }
+}, 700);
 
 
 
