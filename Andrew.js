@@ -46,6 +46,7 @@ cbg.addEventListener('click', () => {
     backgroundindex++;
     hello.style.color = 'white';
     darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
+    minichar.style.display = 'none';
     if (backgroundindex >= backgrounds.length) {
         backgroundindex = 0;   
     }
