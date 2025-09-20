@@ -85,8 +85,6 @@ seemore.addEventListener('click', () => {
 
 const photocontainer = [
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/Andrew.Panimdim.jpg?raw=true", 
-    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/humswek.jpg?raw=true",
-    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/mama.jpg?raw=true",
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/podium.jpg?raw=true",
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/apcraa.jpg?raw=true"
 ];
@@ -103,7 +101,7 @@ setInterval(() => {
     }
     photoshowcaseimg.src = photocontainer[photocontainerindex];
     photoshowcaseimg.style.width = 'auto';
-    photoshowcaseimg.style.height = '50vh';
+    photoshowcaseimg.style.height = '65vh';
 }, 5000);
 
 photoshowcaseimg.addEventListener('click', () => {
