@@ -140,8 +140,9 @@
     box-shadow: 0 0 40px rgb(126, 207, 245);
 }
 
-#MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover,#divv:hover{
+#MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover,#divv:hover, #SeeMore:hover{
     scale: 1.1;
+    cursor: pointer;
 }
 
 #divv {

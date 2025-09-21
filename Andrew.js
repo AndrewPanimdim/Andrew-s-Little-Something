@@ -163,7 +163,14 @@ document.addEventListener('keyup', (event) => {
 const box6 = document.getElementById('box6');
 box6.addEventListener('click', () => {
     page1.classList.remove('show');
-
+    document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
+    hello.style.color = 'white';
+    background.style.display = 'none';
+    darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
+    darkmode.classList.remove('dark');
+    darkmode.textContent = 'light Mode';
+    darkmode.classList.add('light');
+    darkmode.classList.remove('darkk');
 });
 
 
