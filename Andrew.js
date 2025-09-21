@@ -160,6 +160,11 @@ document.addEventListener('keyup', (event) => {
     }
 });
 
+const box6 = document.getElementById('box6');
+box6.addEventListener('click', () => {
+    page1.classList.remove('show');
+
+});
 
 
 
