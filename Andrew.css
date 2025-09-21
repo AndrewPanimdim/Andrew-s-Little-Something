@@ -219,6 +219,7 @@
     position: absolute; 
     top: 14%; left: 9%;
     font-size: clamp(0.5rem, 1rem, 2.4rem);
+    animation: slideleft 2.4s ease-in-out;
 }
 
 #PhotoShowcase{
@@ -357,6 +358,12 @@
 #boxcontainer div:hover a {
     opacity: 1;
 }
+
+#hellon {
+    animation: slideleft 2.1s ease-in-out;
+}
+
+
 
 
 
