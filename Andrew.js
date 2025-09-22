@@ -187,11 +187,10 @@ const friendsvid = ['videos/mrt.MOV', ]
 const hobbiesimg = []
 const hobbiesvid = []
 
+const divs = document.querySelectorAll('.stopp');
 
 
 friends.src = friendsvid
-
-
 
 
 
