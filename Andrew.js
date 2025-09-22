@@ -142,12 +142,18 @@ moveeffect.addEventListener('click', () => {
 document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
+        if(charx > 110) {
+            charx = -10;
+        }
         minichar.style.left = charx + '%';
         stationary = false;
         minichar.src = 'gif/runningright.gif';
     }
     else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
         charx -= stepmini;
+        if(charx < -10) {
+            charx = 110;
+        }
         minichar.style.left = charx + '%';
         stationary = false;
         minichar.src = 'gif/runningleft.gif';
@@ -173,6 +179,9 @@ box6.addEventListener('click', () => {
     darkmode.classList.add('light');
     darkmode.classList.remove('darkk');
 });
+
+
+
 
 
 const hobbies = document.getElementById('hobbies');
