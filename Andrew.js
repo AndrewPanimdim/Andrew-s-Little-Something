@@ -86,7 +86,8 @@ seemore.addEventListener('click', () => {
 const photocontainer = [
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/Andrew.Panimdim.jpg?raw=true", 
     "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/podium.jpg?raw=true",
-    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/apcraa.jpg?raw=true"
+    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/apcraa.jpg?raw=true",
+    'https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/bangkal.jpg?raw=true'
 ];
 const photoshowcase = document.getElementById('PhotoShowcasecontainer');
 const photoshowcaseimg = document.getElementById('photoshowcase');
@@ -172,6 +173,30 @@ box6.addEventListener('click', () => {
     darkmode.classList.add('light');
     darkmode.classList.remove('darkk');
 });
+
+
+const hobbies = document.getElementById('hobbies');
+const friends = document.getElementById('friendsimg');
+const family = document.getElementById('family');
+const interest = document.getElementById('interest');
+const skills = document.getElementById('skills');
+
+const friendsimg = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/group-moa.jpg?raw=true']
+const friendsvid = ['https://github.com/AndrewPanimdim/Portfolio3/blob/main/videos/mrt.MOV']
+const hobbiesimg = ['videos/mrt.MOV']
+const hobbiesvid = []
+
+
+
+friends.src = friendsvid
+
+
+
+
+
+
+
+
 
 
 

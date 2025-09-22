@@ -202,8 +202,8 @@
 
 #page1 {
     background-color: rgb(7, 15, 43);
-    display: none;
-    opacity: 0;
+    display: block;
+    opacity: 1;
     animation: slideup 2s ease-in-out forwards;
     z-index: 5;
 }
@@ -364,6 +364,64 @@
 }
 
 
+#hobbies {
+    background-color: rgb(163, 37, 58);
+    width: 60%;
+    height: 24%;
+    position: absolute;
+    top: 52%;
+    animation: slowslide 10s infinite;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+#friends {
+    background-color: rgb(117, 42, 164);
+    width: 24%;
+    height: 23%;
+    position: absolute;
+    top: 52%;
+    animation: slowslide 10s infinite;
+    animation-delay: 8s;
+    opacity: 0;
+}
+
+#family {
+    background-color: rgb(255, 106, 0);
+    width: 38%;
+    height: 22%;
+    position: absolute;
+    top: 27%;
+    animation: slowslideright 11s infinite;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+#interest {
+    background-color: rgb(42, 144, 164);
+    width: 45%;
+    height: 25%;
+    position: absolute;
+    top: 52%;
+    animation: slowslide 10s infinite;
+    opacity: 0;
+}
+
+#skills {
+    background-color: rgb(176, 52, 94);
+    width: 34%;
+    height: 24%;
+    position: absolute;
+    top: 25%;
+    opacity: 0;
+    animation: slowsliderighttwo 20s infinite;
+    animation-delay: 8s;
+}
+
+
+
+
+
 
 
 
@@ -495,6 +553,24 @@
     from{transform: translateX(0%); scale: 1;}
     50%{transform: translateX(20%); scale: 1.4;}
     to{transform: translateX(0%); scale: 1;}
+}
+
+@keyframes slowslide {
+    from{transform: translateX(-100%); scale: 1;opacity: 1;}
+    50%{transform: translateX(50%); scale: 1.4;opacity: 1;}
+    to{transform: translateX(250%); scale: 1;opacity: 1;}
+}
+
+@keyframes slowslideright  {
+    from{transform: translateX(400%); scale: 1; opacity: 1;}
+    50%{transform: translateX(80%); scale: 1.1; opacity: 1;}
+    to{transform: translateX(-100%); scale: 1; opacity: 1;}
+}
+
+@keyframes slowsliderighttwo  {
+    from{transform: translateX(400%); scale: 1; opacity: 1;}
+    40%{transform: translateX(70%); scale: 1.2; opacity: 1;}
+    to{transform: translateX(-100%); scale: 1; opacity: 1;}
 }
 
 
