@@ -191,15 +191,17 @@ const interest = document.getElementById('interest');
 const skills = document.getElementById('skills');
 
 const friendsimg = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/group-moa.jpg?raw=true']
-const friendsvid = ['videos/mrt.MOV', ]
+const friendsvid = ['videos/mrt.MOV' ]
 
 const hobbiesimg = []
-const hobbiesvid = []
+const interestvid = ['videos/asl.mp4']
 
 const divs = document.querySelectorAll('.stopp');
+const intvid = document.getElementById('interestvid');
 
-
+intvid.src = interestvid
 friends.src = friendsvid
+
 
 
 

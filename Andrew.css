@@ -365,13 +365,13 @@
 
 
 #hobbies {
-    background-color: rgb(163, 37, 58);
-    width: 60%;
-    height: 24%;
+    background-color: rgb(255, 106, 0);
+    width: 38%;
+    height: 22%;
     position: absolute;
-    top: 52%;
-    animation: slowslide 16s infinite;
-    animation-delay: 9s;
+    top: 27%;
+    animation: slowslideright 18s infinite;
+    animation-delay: 2s;
     opacity: 0;
 }
 
@@ -387,14 +387,14 @@
 }
 
 #family {
-    background-color: rgb(255, 106, 0);
-    width: 38%;
-    height: 22%;
+    background-color: rgb(176, 52, 94);
+    width: 34%;
+    height: 24%;
     position: absolute;
-    top: 27%;
-    animation: slowslideright 18s infinite;
-    animation-delay: 2s;
+    top: 25%;
     opacity: 0;
+    animation: slowsliderighttwo 20s infinite;
+    animation-delay: 10s;
 }
 
 #interest {
@@ -409,14 +409,15 @@
 }
 
 #skills {
-    background-color: rgb(176, 52, 94);
-    width: 34%;
+    background-color: rgb(163, 37, 58);
+    width: 60%;
     height: 24%;
     position: absolute;
-    top: 25%;
+    top: 52%;
+    animation: slowslide 16s infinite;
+    animation-delay: 9s;
     opacity: 0;
-    animation: slowsliderighttwo 20s infinite;
-    animation-delay: 10s;
+
 }
 
 
