@@ -181,6 +181,19 @@ box6.addEventListener('click', () => {
 });
 
 
+const fonts = ['bungee','poppins', 'Lora', 'oswald','nunito' ]
+let fontpos = 0
+const helloo = document.getElementById('hello')
+
+helloo.addEventListener('click',()=>{
+    fontpos++;
+    if( fontpos >= fonts.length) {
+        fontpos = 0;
+    } 
+    helloo.style.fontFamily = fonts[fontpos]
+});
+
+
 
 
 

@@ -22,10 +22,11 @@
 
 #hello {
     position: absolute;
-    top: 46%;
+    top: 44%;
     left: 5%;
     animation: slideleft 1.9s ease-in-out;
     font-size: clamp(0.4rem, calc(6vw + 1rem), 11rem);
+    cursor: pointer
 }
 
 #and {
