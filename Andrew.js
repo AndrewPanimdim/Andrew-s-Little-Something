@@ -203,7 +203,6 @@ const AndrewsInformation = {
 
 
 
-
 const hobbies = document.getElementById('hobbies');
 const friends = document.getElementById('friendsimg');
 const family = document.getElementById('family');

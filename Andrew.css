@@ -84,7 +84,7 @@
     top: 5%;
     right: 0%; 
     animation: slidedown 3s ease-in-out;
-    border-radius: 1vw;
+    border-radius: 15%;
     transition: 0.5s;
     z-index: 1;
 }
@@ -444,7 +444,8 @@
     }
 
     #hello{
-        font-size: 2.5rem;
+        font-size: 4rem;
+        top: 68%;
     }
 
     #MovementMiniGame{
@@ -452,8 +453,9 @@
     }
 
     #change-background{
-        width: 15vw;
+        width: 25%;
         height: 20%;
+        top: 5%;
     }
 
     #moveEffect{
@@ -464,9 +466,10 @@
     }
 
     #dark-mode{
-        width: 15vw;
+        width: 25%;
         height: 17%;
-        right: 15%;
+        right: 34%;
+        top: 8%;
     }
 
     #MovementMiniGame{
@@ -474,9 +477,10 @@
     }
 
     #divv{
-        width: 15%;
+        width: 20%;
         height: 15%;
-        left: 55%;
+        left:3%;
+        top: 2%;
 
     }
 
@@ -504,6 +508,10 @@
         display: none;
     }
 
+    #SeeMore{
+        width: 30%;
+        top: 30%;
+    }
     
 }
 
