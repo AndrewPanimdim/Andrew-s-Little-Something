@@ -499,7 +499,9 @@
         display: none;
     }
 
-
+    #boxcontainer{
+        display: none;
+    }
 
     
 }
