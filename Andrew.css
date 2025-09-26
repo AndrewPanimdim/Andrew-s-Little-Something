@@ -444,7 +444,7 @@
     }
 
     #hello{
-        font-size: 2.7grem;
+        font-size: 2.7rem;
         top: 74%;
     }
 
@@ -485,7 +485,7 @@
     }
 
     #ilike {
-        top: 3%;
+        top: 11%;
     }
 
     #moveEffect{
@@ -497,7 +497,8 @@
     }
 
     #hellon {
-        top: 0%;
+        font-size: 10rem ;
+        top: 6%;
     }
 
     #hobbies, #skills, #interest, #friends, #family{
