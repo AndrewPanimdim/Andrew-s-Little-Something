@@ -142,8 +142,8 @@ moveeffect.addEventListener('click', () => {
 document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
-        if(charx > 110) {
-            charx = -10;
+        if(charx > 103) {
+            charx = -5;
         }
         minichar.style.left = charx + '%';
         stationary = false;
@@ -151,8 +151,8 @@ document.addEventListener('keydown', (event) => {
     }
     else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
         charx -= stepmini;
-        if(charx < -10) {
-            charx = 110;
+        if(charx < -5) {
+            charx = 103;
         }
         minichar.style.left = charx + '%';
         stationary = false;
