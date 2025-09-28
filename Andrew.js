@@ -199,7 +199,27 @@ const AndrewsInformation = {
     school: 'National University - Asia Pacific College',
     course: 'Bachelor of Science in Computer Science specializing in Cybersecurity and Forensics',
     birthday: 'April 23, 2006'
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
