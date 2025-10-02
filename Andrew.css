@@ -364,6 +364,10 @@
     animation: slideleft 2.1s ease-in-out;
 }
 
+/* hiding the showcase function*/
+#hobbies, #friends, #family, #interest, #skills { 
+    display: none;
+}
 
 #hobbies {
     background-color: rgb(255, 106, 0);
