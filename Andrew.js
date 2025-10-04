@@ -203,6 +203,15 @@ const AndrewsInformation = {
 }
 
 
+addEventListener("keyup", (event)=>{
+    if(event.key = ' '){
+        fontpos++;
+    }if(fontpos >= fonts.length){
+        fontpos = 0
+    }
+    helloo.style.fontFamily = fonts[fontpos]
+});
+
 
 
 
