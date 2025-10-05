@@ -53,6 +53,7 @@ let backgroundindex = 1;
 const cbg = document.getElementById('change-background');
 const background = document.getElementById('background');
 cbg.addEventListener('click', () => {
+    hello.style.fontFamily = 'bungee';
     backgroundindex++;
     hello.style.color = 'white';
     darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
@@ -181,7 +182,7 @@ box6.addEventListener('click', () => {
 });
 
 
-const fonts = ['bungee','poppins', 'Lora', 'oswald','nunito' ]
+const fonts = ['bungee','rog fonts', 'cooper black','poppins', 'Lora', 'oswald','nunito','times new roman', 'arial' ]
 let fontpos = 0
 const helloo = document.getElementById('hello')
 
