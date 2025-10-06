@@ -2,6 +2,41 @@
 //LINK: https://andrewpanimdim.github.io/Andrew-s-Little-Something/Andrew.html
 
 
+const drewsdata = {
+  name: "Earl Andrew C. Panimdim",
+  nickname: "drew",
+  age: 19,
+  course: "Bachelor of Science in Computer Science",
+  school: "National University - Asia Pacific College",
+  birthday: "April 23, 2006",
+  hobbies: "basketball, bass",
+  language: "python, javascript, css",
+  favorite: {
+    color: "black and white",
+    shoe: "jordan 3 and air force 1",
+    food: "pepperoni pizza",
+    character: "batman and spiderman",
+    player: "devin booker",
+    movie: "spider-man: into the spider-verse",
+    car: "porche 911",
+    "programming language": "python javascript and css"
+  },
+  dream: {
+    job: "torn between ai engineer, Cybersecurity and web developer",
+    school: "University of the Philippines Diliman",
+    girl: "Lola Tung"
+  },
+  ex: 2,
+  status: "single",
+  siblings: 4,
+  hometown: "Makati City",
+  laptop: "ASUS TUF Gaming A15",
+  phone: "Iphone 11",
+  friends: "Rakim, Rommel, Eugui, Sean, Neil, Kerby, Kevin",
+  friend: "jose francis romanillos, he might be a little gay but he mah boi fr"
+};
+
+
 const startbutton =  document.getElementById('start');
 const hello = document.getElementById('hello');
 let windowstatus = false;
@@ -195,23 +230,21 @@ helloo.addEventListener('click',()=>{
 });
 
 
-const AndrewsInformation = {
-    name: 'Earl Andrew C. Panimdim',
-    school: 'National University - Asia Pacific College',
-    course: 'Bachelor of Science in Computer Science specializing in Cybersecurity and Forensics',
-    birthday: 'April 23, 2006'
-
-}
 
 
-addEventListener("keyup", (event)=>{
-    if(event.key === ' '){
-        fontpos++;
-    }if(fontpos >= fonts.length){
-        fontpos = 0
-    }
-    helloo.style.fontFamily = fonts[fontpos]
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
