@@ -106,12 +106,6 @@ start.addEventListener('click', () => {
     start.style.animation = 'start 0.5s forwards';
 });
 
-   
-
-
-
-
-
 const seemore = document.getElementById('SeeMore');
 const page1 = document.getElementById('page1');
 seemore.addEventListener('click', () => {
@@ -147,8 +141,6 @@ photoshowcaseimg.addEventListener('click', () => {
         photocontainerindex = 0;
     }
 });
-
-
 
 
 const minichar = document.getElementById('minicharacter');
@@ -231,7 +223,7 @@ helloo.addEventListener('click',()=>{
 
 
 
-
+ 
 
 
 
