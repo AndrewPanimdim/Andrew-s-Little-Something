@@ -1,8 +1,7 @@
 
 const minichar = document.getElementById('minicharacterdd');
-const moveeffect = document.getElementById('moveEffect');
 
-let charx = 60;
+let charx = 2;
 let chary = 0
 const stepmini = 3;
 let ministatus = false;
