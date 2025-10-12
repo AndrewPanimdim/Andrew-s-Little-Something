@@ -7,12 +7,11 @@ const stepmini = 3;
 
 stationary = true;
 
-
 document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
         if(charx > 103) {
-            charx = -5
+            charx = -5;
         }
         minichar.style.left = charx + '%';
         stationary = false;
