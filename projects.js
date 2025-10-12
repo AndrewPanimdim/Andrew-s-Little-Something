@@ -10,7 +10,7 @@ stationary = true;
 document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
-        if(charx > 103) {
+        if(charx > 100) {
             charx = -5;
         }
         minichar.style.left = charx + '%';
@@ -20,7 +20,7 @@ document.addEventListener('keydown', (event) => {
     else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
         charx -= stepmini;
         if(charx < -5) {
-            charx = 103;
+            charx = 100;
         }
         minichar.style.left = charx + '%';
         stationary = false;
