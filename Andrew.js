@@ -177,9 +177,9 @@ moveeffect.addEventListener('click', () => {
 document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
-        if(charx > 102) {
+        if(charx > 92) {
             window.open('https://andrewpanimdim.github.io/Andrew-s-Little-Something/projects.html', '_blank');
-            charx = 93;
+            charx = 92;
         }
         minichar.style.left = charx + '%';
         stationary = false;
