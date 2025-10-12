@@ -1,0 +1,12 @@
+#projhead{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    animation: 2s slideleft ease-in-out;
+    transition: 1s;
+    font-size: 5vw;
+}
+@keyframes slideleft {
+    from{transform: translateX(-500%);}
+    to{transform: translateX(0);}
+}
