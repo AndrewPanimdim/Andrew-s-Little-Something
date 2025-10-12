@@ -177,8 +177,9 @@ moveeffect.addEventListener('click', () => {
 document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
-        if(charx > 103) {
+        if(charx > 102) {
             window.open('https://andrewpanimdim.github.io/Andrew-s-Little-Something/projects.html', '_blank');
+            charx = 93;
         }
         minichar.style.left = charx + '%';
         stationary = false;
@@ -186,8 +187,8 @@ document.addEventListener('keydown', (event) => {
     }
     else if(event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A'){
         charx -= stepmini;
-        if(charx < -5) {
-            charx = 103;
+        if(charx < -1) {
+            charx = -1;
         }
         minichar.style.left = charx + '%';
         stationary = false;
