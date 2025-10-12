@@ -106,6 +106,12 @@ start.addEventListener('click', () => {
     start.style.animation = 'start 0.5s forwards';
 });
 
+   
+
+
+
+
+
 const seemore = document.getElementById('SeeMore');
 const page1 = document.getElementById('page1');
 seemore.addEventListener('click', () => {
@@ -143,11 +149,13 @@ photoshowcaseimg.addEventListener('click', () => {
 });
 
 
+
+
 const minichar = document.getElementById('minicharacter');
 const moveeffect = document.getElementById('moveEffect');
 
 let charx = 60;
-
+let chary = 0
 const stepmini = 3;
 let ministatus = false;
 
@@ -157,7 +165,6 @@ moveeffect.addEventListener('click', () => {
     ministatus = !ministatus;
     if (ministatus) {
         minichar.style.display = 'block';
-        alert('use D and A or arrow keys to move right and left');
         hello.style.color = 'white';
         document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
         background.style.display = 'none';
@@ -171,7 +178,7 @@ document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
         if(charx > 103) {
-            charx = -5;
+            window.open('https://andrewpanimdim.github.io/Andrew-s-Little-Something/projects.html', '_blank');
         }
         minichar.style.left = charx + '%';
         stationary = false;
@@ -221,9 +228,35 @@ helloo.addEventListener('click',()=>{
     helloo.style.fontFamily = fonts[fontpos]
 });
 
+const apiKey = "eafea886309d449d9c7134628250610"; // Your OpenWeatherMap API key
 
+weatherBtn.addEventListener('click', () => {
+    const city = weatherCity.value.trim();
+    if (!city) {
+        weatherResult.textContent = "Please enter a city name.";
+        return;
+    }
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            if (data.cod !== 200) {
+                weatherResult.textContent = "City not found.";
+                return;
+            }
+            weatherResult.innerHTML = `
+                <b>${data.name}, ${data.sys.country}</b><br>
+                ${data.weather[0].main} - ${data.weather[0].description}<br>
+                Temp: ${data.main.temp}°C<br>
+                Humidity: ${data.main.humidity}%<br>
+                Wind: ${data.wind.speed} m/s
+            `;
+        })
+        .catch(() => {
+            weatherResult.textContent = "Error fetching weather.";
+        });
+});
 
- 
 
 
 
@@ -275,33 +308,3 @@ const intvid = document.getElementById('interestvid');
 
 intvid.src = interestvid
 friends.src = friendsvid
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

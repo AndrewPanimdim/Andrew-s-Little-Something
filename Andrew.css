@@ -94,18 +94,6 @@
     box-shadow: 0 0 30px rgb(253, 218, 253);
 }
 
-#dot{ 
-    background-color: orange;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: absolute;
-    top: 400px;
-    left: 100px;
-    animation: pop 0.5s ease-in-out;
-    z-index: -10;
-}
-
 #MovementMiniGame {
     background-color: rgb(240, 107, 41);
     width: 8%;
@@ -141,12 +129,12 @@
     box-shadow: 0 0 40px rgb(126, 207, 245);
 }
 
-#MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover,#wapi:hover, #SeeMore:hover, #SeeMore:hover{
+#MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover,#divv:hover, #SeeMore:hover, #SeeMore:hover{
     scale: 1.3;
     cursor: pointer;
 }
 
-#wapi {
+#divv {
     width: 12%;
     height: 17%;
     position: absolute;
@@ -159,7 +147,7 @@
     animation: slideright 2s ease-in-out;
 }
 
-#wapi:hover{
+#divv:hover{
     background-color: rgb(250, 220, 89);
     box-shadow: 0 0 30px rgb(232, 218, 115);
 }
@@ -193,11 +181,11 @@
     scale: 1.3;
 }
 
-#hello.move, #dark-mode.move, #change-background.move, #MovementMiniGame.move, #wapi.move, #SeeMore.move {
+#hello.move, #dark-mode.move, #change-background.move, #MovementMiniGame.move, #divv.move, #SeeMore.move {
     animation: move 1s ease-in-out forwards;
 }
 
-#hello.back, #dark-mode.back, #change-background.back, #MovementMiniGame.back, #wapi.back, #SeeMore.back {
+#hello.back, #dark-mode.back, #change-background.back, #MovementMiniGame.back, #divv.back, #SeeMore.back {
     animation: back 1s ease-in-out forwards;
 }
 
@@ -215,6 +203,7 @@
 }
 
 
+
 #ilike{
     position: absolute; 
     top: 14%; left: 9%;
@@ -222,11 +211,37 @@
     animation: show 7s ease-in-out;
 }
 
+#PhotoShowcase{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    background-color: red;
+    object-fit: cover; 
+}
+
+#PhotoShowcasecontainer{
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 2vw;
+    overflow: hidden;
+    transition: 1s;
+    cursor: pointer;
+    animation: slideleft 2.4s ease-in-out;
+    display: none;
+}
+
+#PhotoShowcasecontainer:hover{
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    scale: 1.05;
+}
+
 #minicharacter {
     width: auto; 
     height: 10vh; 
     position: absolute; 
-    bottom: 3%; 
+    top: 85%; 
     left: 60%; 
     z-index: 2;
     display: none;
@@ -234,7 +249,7 @@
 }
 
 
-#moveEffect, #change-background, #dark-mode, #MovementMiniGame, #wapi, #SeeMore{
+#moveEffect, #change-background, #dark-mode, #MovementMiniGame, #divv, #SeeMore{
     font-family: bungee;
     font-size: 80%;
     display: flex;
@@ -244,7 +259,7 @@
     color: rgba(255, 255, 255, 0);
 }
 
-#moveEffect:hover, #change-background:hover, #dark-mode:hover, #MovementMiniGame:hover, #wapi:hover, #SeeMore:hover{
+#moveEffect:hover, #change-background:hover, #dark-mode:hover, #MovementMiniGame:hover, #divv:hover, #SeeMore:hover{
     color: rgb(0, 0, 0);
 }
 
@@ -339,6 +354,73 @@
     animation: slidedown 1.6s ease-in-out;
 }
 
+/* hiding the showcase function*/
+#hobbies, #friends, #family, #interest, #skills { 
+    display: none;
+}
+
+#hobbies {
+    background-color: rgb(255, 106, 0);
+    width: 38%;
+    height: 22%;
+    position: absolute;
+    top: 27%;
+    animation: slowslideright 18s infinite;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+#friends {
+    background-color: rgb(117, 42, 164);
+    width: 24%;
+    height: 23%;
+    position: absolute;
+    top: 52%;
+    animation: slowslide 15s infinite;
+    animation-delay: 12.5s;
+    opacity: 0;
+}
+
+#family {
+    background-color: rgb(176, 52, 94);
+    width: 34%;
+    height: 24%;
+    position: absolute;
+    top: 25%;
+    opacity: 0;
+    animation: slowsliderighttwo 20s infinite;
+    animation-delay: 10s;
+}
+
+#interest {
+    background-color: rgb(42, 144, 164);
+    width: 37%;
+    height: 25%;
+    position: absolute;
+    top: 52%;
+    animation: slowslide 15s infinite;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+#skills {
+    background-color: rgb(163, 37, 58);
+    width: 60%;
+    height: 24%;
+    position: absolute;
+    top: 52%;
+    animation: slowslide 16s infinite;
+    animation-delay: 9s;
+    opacity: 0;
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -388,7 +470,7 @@
         display: none;
     }
 
-    #wapi{
+    #divv{
         width: 20%;
         height: 15%;
         left:3%;
@@ -404,13 +486,17 @@
         display: none;
     }
 
-    #moveEffect, #change-background, #dark-mode, #MovementMiniGame, #wapi, #SeeMore{
+    #moveEffect, #change-background, #dark-mode, #MovementMiniGame, #divv, #SeeMore{
     font-size: 50%;
     }
 
     #hellon {
         font-size: 10rem ;
         top: 6%;
+    }
+
+    #hobbies, #skills, #interest, #friends, #family{
+        display: none;
     }
 
     #boxcontainer{
@@ -509,18 +595,3 @@
     40%{transform: translateX(70%); scale: 1.2; opacity: 1;}
     to{transform: translateX(-100%); scale: 1; opacity: 1;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
