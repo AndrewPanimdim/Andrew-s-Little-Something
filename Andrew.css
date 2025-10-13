@@ -191,7 +191,7 @@
 
 #page1 {
     background-color: rgb(7, 15, 43);
-    display: none;
+    display: block;
     opacity: 0;
     animation: slideup 0.7s ease-in-out forwards;
     z-index: 5;
@@ -415,6 +415,13 @@
 
 }
 
+#andrewvideo{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    animation: slidedownSCALE 2s ease-in-out;
+    border-radius:1vw ;
+}
 
 
 

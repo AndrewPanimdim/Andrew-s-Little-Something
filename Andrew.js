@@ -229,83 +229,18 @@ helloo.addEventListener('click',()=>{
     helloo.style.fontFamily = fonts[fontpos]
 });
 
-const apiKey = "eafea886309d449d9c7134628250610"; // Your OpenWeatherMap API key
-
-weatherBtn.addEventListener('click', () => {
-    const city = weatherCity.value.trim();
-    if (!city) {
-        weatherResult.textContent = "Please enter a city name.";
-        return;
-    }
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            if (data.cod !== 200) {
-                weatherResult.textContent = "City not found.";
-                return;
-            }
-            weatherResult.innerHTML = `
-                <b>${data.name}, ${data.sys.country}</b><br>
-                ${data.weather[0].main} - ${data.weather[0].description}<br>
-                Temp: ${data.main.temp}°C<br>
-                Humidity: ${data.main.humidity}%<br>
-                Wind: ${data.wind.speed} m/s
-            `;
-        })
-        .catch(() => {
-            weatherResult.textContent = "Error fetching weather.";
-        });
-});
 
 
 
+const andrewvid = ['videos/vid1.mp4', 'videos/vid2.mp4', 'videos/asl.mp4'];
+const andvid = document.getElementById('andrewvideo');
+let andrewvidindex = 0;
+
+setInterval(() => {
+    andrewvidindex+=1;
+    andvid.src = andrewvid[andrewvidindex];
+},20000);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const hobbies = document.getElementById('hobbies');
-const friends = document.getElementById('friendsimg');
-const family = document.getElementById('family');
-const interest = document.getElementById('interest');
-const skills = document.getElementById('skills');
-
-const friendsimg = ['https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/group-moa.jpg?raw=true']
-const friendsvid = ['videos/mrt.MOV' ]
-
-const hobbiesimg = []
-const interestvid = ['videos/asl.mp4']
-
-const divs = document.querySelectorAll('.stopp');
-const intvid = document.getElementById('interestvid');
-
-intvid.src = interestvid
-friends.src = friendsvid
+andvid.src = andrewvid[andrewvidindex];
