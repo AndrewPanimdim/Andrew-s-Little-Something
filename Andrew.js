@@ -239,7 +239,10 @@ let andrewvidindex = 0;
 setInterval(() => {
     andrewvidindex+=1;
     andvid.src = andrewvid[andrewvidindex];
-},20000);
+    if(andrewvidindex >= andrewvid.length){
+        andrewvidindex = 0;
+    }
+},10000);
 
 
 
