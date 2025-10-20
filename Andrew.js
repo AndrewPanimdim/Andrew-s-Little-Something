@@ -84,12 +84,12 @@ darkmode.addEventListener('click', () =>{
 
 
 const backgrounds = ['https://i.pinimg.com/originals/82/88/e9/8288e9eec7c66c0790ee546462b8e204.gif', 'http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-50.gif','https://i.pinimg.com/originals/42/b4/22/42b4229a9ec3145edaa895b2415dd720.gif']
-let backgroundindex = 1;
+let backgroundindex = 0;
 const cbg = document.getElementById('change-background');
 const background = document.getElementById('background');
 cbg.addEventListener('click', () => {
-    hello.style.fontFamily = 'bungee';
     backgroundindex++;
+    hello.style.fontFamily = 'bungee';
     hello.style.color = 'white';
     darkmode.style.backgroundColor = 'rgb(255, 255, 255)';
     minichar.style.display = 'none';
@@ -101,6 +101,9 @@ cbg.addEventListener('click', () => {
     background.style.display = 'block';
 });
 
+
+
+
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
     start.style.animation = 'start 0.5s forwards';
@@ -109,43 +112,10 @@ start.addEventListener('click', () => {
    
 
 
-
-
-
 const seemore = document.getElementById('SeeMore');
 const page1 = document.getElementById('page1');
 seemore.addEventListener('click', () => {
     page1.classList.add('show');
-});
-
-
-const photocontainer = [
-    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/Andrew.Panimdim.jpg?raw=true", 
-    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/podium.jpg?raw=true",
-    "https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/apcraa.jpg?raw=true",
-    'https://github.com/AndrewPanimdim/Andrew-s-Little-Something/blob/main/photos/bangkal.jpg?raw=true'
-];
-const photoshowcase = document.getElementById('PhotoShowcasecontainer');
-const photoshowcaseimg = document.getElementById('photoshowcase');
-let photocontainerindex = 0;
-
-photoshowcaseimg.src = photocontainer[photocontainerindex];
-
-setInterval(() => {
-    photocontainerindex++;
-    if(photocontainerindex >= photocontainer.length){
-        photocontainerindex = 0;
-    }
-    photoshowcaseimg.src = photocontainer[photocontainerindex];
-    photoshowcaseimg.style.width = 'auto';
-    photoshowcaseimg.style.height = '65vh';
-}, 5000);
-
-photoshowcaseimg.addEventListener('click', () => {
-    photocontainerindex++;
-    if(photocontainerindex >= photocontainer.length){
-        photocontainerindex = 0;
-    }
 });
 
 
@@ -178,7 +148,7 @@ document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D'){
         charx += stepmini;
         if(charx > 92) {
-            window.open('https://andrewpanimdim.github.io/Andrew-s-Little-Something/projects.html', '_blank');
+            window.location.href = 'https://andrewpanimdim.github.io/Andrew-s-Little-Something/projects.html';
             charx = 92;
         }
         minichar.style.left = charx + '%';

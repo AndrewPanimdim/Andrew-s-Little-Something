@@ -21,6 +21,7 @@ document.addEventListener('keydown', (event) => {
         charx -= stepmini;
         if(charx < -1) {
             charx = -1;
+            window.location.href = 'https://andrewpanimdim.github.io/Andrew-s-Little-Something/index.html';
         }
         minichar.style.left = charx + '%';
         stationary = false;
