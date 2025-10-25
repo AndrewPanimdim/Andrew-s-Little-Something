@@ -37,20 +37,20 @@ const drewsdata = {
 };
 
 
-const startbutton =  document.getElementById('start');
-const hello = document.getElementById('hello');
-let windowstatus = false;
-startbutton.addEventListener('click', () => {
-    windowstatus = !windowstatus;
-    if (windowstatus) {
-        document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
-        hello.style.display = 'block';
-        document.getElementById('container').style.display = 'block';
-        //document.getElementById('littlesomething').style.display = 'block';
-    } else {
-        hello.style.display = 'none';
-    }
-});
+//    const startbutton =  document.getElementById('start');
+  //  const hello = document.getElementById('hello');
+    ///let windowstatus = false;
+    //startbutton.addEventListener('click', () => {
+      //  windowstatus = !windowstatus;
+        //if (windowstatus) {
+          //  document.body.style.backgroundColor = 'rgba(15, 15, 15, 1)';
+            //hello.style.display = 'block';
+            //document.getElementById('container').style.display = 'block';
+            //document.getElementById('littlesomething').style.display = 'block';
+        //} else {
+          //  hello.style.display = 'none';
+        //}
+    //});
 
 
 
@@ -122,7 +122,7 @@ seemore.addEventListener('click', () => {
 
 
 const minichar = document.getElementById('minicharacter');
-const moveeffect = document.getElementById('moveEffect');
+const moveeffect = document.getElementById('start');
 
 let charx = 60;
 let chary = 0

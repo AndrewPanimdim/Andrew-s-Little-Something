@@ -12,7 +12,8 @@
     font-size: clamp(1rem, calc(2.5vw+ 1rem), 3rem);
     cursor: pointer;
     transition: 0.6s;
-    animation: jumping 0.4s ease-in-out infinite alternate;
+    animation: slideup 4s ease-in-out forwards;
+    z-index: 100;
 }
 
 #start:hover {
@@ -112,12 +113,12 @@
 }
 
 #moveEffect{
-    background-color: rgb(81, 198, 252);
+    background-color: rgb(112, 81, 252);
     width: 12%;
     height: 14%; 
     position: absolute;
-    top: 85%;
-    right: 65%; 
+    top: 7%;
+    right: 20%; 
     animation: slideright 3s ease-in-out;
     border-radius: 1vw;
     transition: 0.5s;
@@ -128,12 +129,12 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    color: black;
+    color: rgba(0, 0, 0, 0);
 }
 
 #moveEffect:hover{
-    background-color: rgb(126, 207, 245); 
-    box-shadow: 0 0 40px rgb(126, 207, 245);
+    background-color: rgb(112, 81, 252);
+    box-shadow: 0 0 40px rgb(112, 81, 252);
 }
 
 #MovementMiniGame:hover, #change-background:hover, #dark-mode:hover, #moveEffect:hover,#divv:hover, #SeeMore:hover, #SeeMore:hover{
