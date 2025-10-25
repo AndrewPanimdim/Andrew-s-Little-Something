@@ -116,12 +116,19 @@
     width: 12%;
     height: 14%; 
     position: absolute;
-    top: 5%;
-    right: 20%; 
+    top: 85%;
+    right: 65%; 
     animation: slideright 3s ease-in-out;
     border-radius: 1vw;
     transition: 0.5s;
     z-index: 2;
+    font-family: bungee;
+    font-size: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: black;
 }
 
 #moveEffect:hover{
@@ -249,7 +256,7 @@
 }
 
 
-#moveEffect, #change-background, #dark-mode, #MovementMiniGame, #divv, #SeeMore{
+#change-background, #dark-mode, #MovementMiniGame, #divv, #SeeMore{
     font-family: bungee;
     font-size: 80%;
     display: flex;

@@ -217,3 +217,8 @@ setInterval(() => {
 
 
 andvid.src = andrewvid[andrewvidindex];
+
+document.addEventListener('mousemove', (event) => {
+    // event.clientX and event.clientY give the cursor position
+    console.log('Cursor at:', event.clientX, event.clientY);
+});
